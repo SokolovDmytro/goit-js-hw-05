@@ -12,20 +12,23 @@
 
 class Storage {
     constructor(arr) {
-        this.items = arr;
+      this.items = arr;
     }
+  
     getItems() {
-        return this.items;
+      return this.items;
     }
+  
     addItem(item) {
-        this.items.push(item);
+      this.items.push(item);
     }
-    removeItem() {
-        this.items.includes(item)
-        ? this.items.splise(this.items.indexOf(item), 1)
+  
+    removeItem(item) {
+      this.items.includes(item)
+        ? this.items.splice(this.items.indexOf(item), 1)
         : '';
     }
-}
+  }
 
 const storage = new Storage([
   'Нанитоиды',
