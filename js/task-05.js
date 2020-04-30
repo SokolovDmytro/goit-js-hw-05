@@ -55,27 +55,51 @@ class Car {
      * Записывает в свойство isOn значение false,
      * и сбрасывает текущую скорость в 0
      */
-    turnOff() {}
+    turnOff() {
+        if (this.isOn === true) {
+            this.isOn = false;
+            this.speed = 0;
+          } else {
+            console.log('car is already Off');
+          }
+    }
 
     /*
      * Добавялет к свойству speed полученное значение,
      * при условии что результирующая скорость
      * не больше чем значение свойства maxSpeed
      */
-    accelerate(value) {}
+    accelerate(value) {
+        if (this.speed + value > this.maxSpeed) {
+            this.speed = this.maxSpeed;
+          } else {
+            this.speed += Number(value);
+          }
+    }
 
     /*
      * Отнимает от свойства speed полученное значение,
      * при условии что результирующая скорость не меньше нуля
      */
-    decelerate(value) {}
+    decelerate(value) {
+        if (this.speed - value < 0) {
+            this.speed = 0;
+          } else {
+            this.speed -= Number(value);
+          }
+    }
 
     /*
      * Добавляет в поле distance киллометраж (hours * speed),
      * но только в том случае если машина заведена!
      */
-    drive(hours) {}
-}
+    drive(hours) {
+        if (this.isOn) {
+            this.distance += Number(hours) * this.speed;
+          }
+        }
+    }
+
 
 const mustang = new Car({
     maxSpeed: 200,
