@@ -44,7 +44,7 @@ class Car {
   // Записывает в свойство isOn значение true
 
   turnOn() {
-    this.isOn === false ? (this.isOn = true) : console.log('car is already On');
+    this.isOn === false ? (this.isOn = true) : console.log('двигатель уже работает');
   }
 
   // Добавь код для того чтобы заглушить автомобиль
@@ -56,7 +56,7 @@ class Car {
       this.isOn = false;
       this.speed = 0;
     } else {
-      console.log('car is already Off');
+      console.log('двигатель заглушен');
     }
   }
 
