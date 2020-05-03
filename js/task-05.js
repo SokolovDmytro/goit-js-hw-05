@@ -66,23 +66,15 @@ class Car {
   // не больше чем значение свойства maxSpeed
 
   accelerate(value) {
-    if (this.speed + value > this.maxSpeed) {
-      this.speed = this.maxSpeed;
-    } else {
       this.speed += Number(value);
-    }
-  }
+     }
 
   // Отнимает от свойства speed полученное значение,
   // при условии что результирующая скорость не меньше нуля
 
   decelerate(value) {
-    if (this.speed - value < 0) {
-      this.speed = 0;
-    } else {
       this.speed -= Number(value);
     }
-  }
 
   // Добавляет в поле distance киллометраж (hours * speed),
   // но только в том случае если машина заведена!
