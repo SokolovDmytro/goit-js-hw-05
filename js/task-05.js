@@ -13,6 +13,7 @@ class Car {
       `maxSpeed = ${car.maxSpeed}, speed = ${car.speed}, isOn = ${car.isOn}, distance = ${car.distance} и price = ${car.price}`,
     );
   }
+  
   // Конструктор получает объект настроек.
   // Добавь свойства будущеего экземпляра класса:
   // speed - текущая скорость, изначально 0
