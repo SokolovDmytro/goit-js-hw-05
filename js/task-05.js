@@ -13,7 +13,7 @@ class Car {
       `maxSpeed = ${car.maxSpeed}, speed = ${car.speed}, isOn = ${car.isOn}, distance = ${car.distance} и price = ${car.price}`,
     );
   }
-  
+
   // Конструктор получает объект настроек.
   // Добавь свойства будущеего экземпляра класса:
   // speed - текущая скорость, изначально 0
@@ -66,15 +66,23 @@ class Car {
   // не больше чем значение свойства maxSpeed
 
   accelerate(value) {
-      this.speed += Number(value);
-     }
+    if (this.speed + value > this.maxSpeed) {
 
+    } 
+    else {
+      this.speed += Number(value);
+    }
+  }
   // Отнимает от свойства speed полученное значение,
   // при условии что результирующая скорость не меньше нуля
 
   decelerate(value) {
+    if (this.speed - value < 0) {
+
+    } else {
       this.speed -= Number(value);
     }
+  }
 
   // Добавляет в поле distance киллометраж (hours * speed),
   // но только в том случае если машина заведена!
